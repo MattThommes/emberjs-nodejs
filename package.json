@@ -1,5 +1,6 @@
 {
-  "name": "application-name",
+  "name": "MattThommes-emberjs-nodejs",
+  "description": "Getting to know Ember courtesy of Node.",
   "version": "0.0.1",
   "private": true,
   "scripts": {

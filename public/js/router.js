@@ -1,9 +1,3 @@
-RecipeTracker.Router = Ember.Router.extend({
-  root: Ember.Route.extend({
-    index: Ember.Route.extend({
-      route: '/'
-    })
-  })
-})
-
-RecipeTracker.initialize();
+Todos.Router.map(function() {
+  this.resource('todos', { path: '/' });
+});
