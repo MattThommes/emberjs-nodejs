@@ -3,7 +3,7 @@
   <title>A very simple Ember.js and Node web app example</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background:white;">
+<body>
 
 	<section id="todoapp">
 		<header id="header">
@@ -13,18 +13,12 @@
 
 		<section id="main">
 			<ul id="todo-list">
-				<li class="completed">
-					<input type="checkbox" class="toggle">
-					<label>Learn Ember.js</label><button class="destroy"></button>
-				</li>
-				<li>
-					<input type="checkbox" class="toggle">
-					<label>...</label><button class="destroy"></button>
-				</li>
-				<li>
-					<input type="checkbox" class="toggle">
-					<label>Profit!</label><button class="destroy"></button>
-				</li>
+				{{#each todo in model}}
+					<li>
+						<input type="checkbox" class="toggle">
+						<label>{{todo.title}}</label><button class="destroy"></button>
+					</li>
+				{{/each}}
 			</ul>
 
 			<input type="checkbox" id="toggle-all">
@@ -62,6 +56,7 @@
   <script src="js/libs/ember-data.js"></script>
   <script src="js/application.js"></script>
   <script src="js/router.js"></script>
+  <script src="js/models/todo.js"></script>
 
 </body>
 </html>
